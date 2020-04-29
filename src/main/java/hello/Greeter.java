@@ -9,22 +9,22 @@ public class Greeter {
 
 
 		try {
-			pikkus = lugeja.CountLugeja(name);
+			pikkus = lugeja.countLugeja(name);
 		} catch (Exception x) {
 			return "Oops";
 		}
 
-			if (0 == pikkus || pikkus <= 1 ) {
+			if ( pikkus <= 1 && pikkus >= 0 ) {
 				return "Su nimes on midagi mäda";
-			} else if (pikkus > 15) {
-				return " Su nimi on liiga pikk, see ei ole võimalik";
+			} else if (pikkus > 15 ) {
+				return "Su nimi on liiga pikk, see ei ole võimalik";
 
-			} else if (2 <= pikkus || pikkus <= 15) {
+			} else if ( pikkus >= 2 && pikkus <= 15) {
 				return "Hello world!";
 
-			} else {
-				return "Ütlen Tere!";
-			}
+			} else
+				return "Kes sa veel oled";
+
 		}
 	}
 

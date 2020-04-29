@@ -6,7 +6,7 @@ public class Counter {
 
     }
 
-    public static int CountLugeja(String nimepikkus) {
+    public int countLugeja(String nimepikkus) {
         return nimepikkus.length();
     }
 
